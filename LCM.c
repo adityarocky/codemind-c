@@ -1,13 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c,d,i,l;
-    scanf("%d%d",&a,&b);
-    for(i=1;i<=a&&i<=b;i++)
+    int a,b,i,c=0;
+    scanf("%d %d",&a,&b);
+    for(i=1;i<=a*b;i++)
     {
-        if(a%i==0&&b%i==0)
-        d=i;
-        
-    }l=(a*b)/d;
-    printf("%d",l);
+        if(i%a==0 && i%b==0)
+        {
+            printf("%d",i);
+            break;
+        }
+        c++;
+    }
 }
